@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,22 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script src="https://kit.fontawesome.com/e7cfebe87f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<div id="header">
-			<nav>
-				<!-- <img src="image/logo.png" class="logo"> -->
+		<nav>
+			<!-- <img src="image/logo.png" class="logo"> -->
+			<a href="index.html" style="text-decoration: none;">
 				<h3 class="logo"><span>K.</span>Sarpong</h3>
-				<ul id="sidemenu">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="services.html">Services</a></li>
-					<!-- <li><a href="portfolio.html">Portfolio</a></li> -->
-					<li><a href="contact.html">Contact</a></li>
-					<i class="fas fa-times" onclick="closemenu()"></i>
+			</a>
+			<ul id="sidemenu">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="services.html">Services</a></li>
+				<!-- <li><a href="portfolio.html">Portfolio</a></li> -->
+				<li><a href="contact.html">Contact</a></li>
+				<i class="fas fa-times" onclick="closemenu()"></i>
 
-				</ul>
-				<i class="fas fa-bars" onclick="openmenu()"></i>
-			</nav>
+			</ul>
+			<i class="fas fa-bars" onclick="openmenu()"></i>
+		</nav>
 	</div>
 
 
@@ -49,63 +53,64 @@
 						<input type="email" name="email" placeholder="Your Email" required>
 						<textarea name="message" rows="6" placeholder="Your Message"></textarea>
 
-		                  <label>What is your preferred method of contact?</label>
+						<label>What is your preferred method of contact?</label>
 						<div class="btns">
-		                  <div>
-		                    <input type="radio" id="btn1" name="btn1" class="btn1">
-		                    <label class="labelbtn1" for="btn1">Phone</label>
-		                  </div>
-		                  <div>
-		                    <input type="radio" id="btn2" name="btn2" class="btn2">
-		                    <label class="labelbtn2" for="btn2">Phone</label>
-		                  </div>
-		                </div>
+							<div>
+								<input type="radio" id="btn1" name="btn1" class="btn1">
+								<label class="labelbtn1" for="btn1">Phone</label>
+							</div>
+							<div>
+								<input type="radio" id="btn2" name="btn2" class="btn2">
+								<label class="labelbtn2" for="btn2">Phone</label>
+							</div>
+						</div>
 						<button type="submit" class="btn btn2">Submit</button>
-		                
+
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div class="copyright">
-			<p>Copyright &copy; Johnny Doe. Made with <i class="fas fa-heart"> </i> By group 4 - Web Tech</p>
-		</div>
+		<p>Copyright &copy; Johnny Doe. Made with <i class="fas fa-heart"> </i> By group 4 - Web Tech</p>
 	</div>
-<script type="text/javascript">
-	
-	var tablinks = document.getElementsByClassName("tab-links");
-	var tabcontents = document.getElementsByClassName("tab-contents");
+	</div>
+	<script type="text/javascript">
 
-	function opentab(tabname){
-		for(tablink of tablinks){
-			tablink.classList.remove("active-links");
+		var tablinks = document.getElementsByClassName("tab-links");
+		var tabcontents = document.getElementsByClassName("tab-contents");
+
+		function opentab(tabname) {
+			for (tablink of tablinks) {
+				tablink.classList.remove("active-links");
+			}
+
+			for (tabcontent of tabcontents) {
+				tabcontent.classList.remove("active-tab");
+			}
+
+			event.currentTarget.classList.add("active-links");
+			document.getElementById(tabname).classList.add("active-tab");
 		}
 
-		for(tabcontent of tabcontents){
-			tabcontent.classList.remove("active-tab");
+	</script>
+
+	<script type="text/javascript">
+		var sidemenu = document.getElementById("sidemenu");
+
+		function openmenu() {
+			sidemenu.style.right = "0";
 		}
 
-		event.currentTarget.classList.add("active-links");
-		document.getElementById(tabname).classList.add("active-tab");
-	}
-
-</script>
-
-<script type="text/javascript">
-	var sidemenu = document.getElementById("sidemenu");
-
-	function openmenu(){
-		sidemenu.style.right = "0";
-	}
-
-	function closemenu(){
-		sidemenu.style.right = "-200px";
-	}
+		function closemenu() {
+			sidemenu.style.right = "-200px";
+		}
 
 
-</script>
+	</script>
 
 </body>
+
 </html>
